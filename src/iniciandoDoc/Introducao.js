@@ -1,5 +1,5 @@
 import { useState } from "react"
-import "./App.css"
+    import "./App.css"
 
 //Introdução no React aprendendo criar e aninhar componente, adicinar marcação, adicinar estilo, exibir dados, renderizar condicinal, renderizar lista, responder eventos, atualizar tela,  usar Hooks, compartilahar dados entre componentes
 function Botao({ onClick, count }) {
@@ -10,7 +10,7 @@ function Botao({ onClick, count }) {
         </button>)
 }
 
-function Perfil() {
+export function Perfil() {
     const Usuario = {
         nome: "Dogguinho",
         imagemUrl: "https://i.imgur.com/KYTJocv_d.webp?maxwidth=760&fidelity=grand",
@@ -18,7 +18,7 @@ function Perfil() {
     }
     return (
         /*Marcação JSX*/<>
-            {<h1>{Usuario.nome}</h1> /*Exibindo dados  */}
+            {<h1>{Usuario.nome}</h1> /*Exibindo dados*/}
             <img src={Usuario.imagemUrl} alt={'Foto de ' + Usuario.nome} className="avatar" style={{
                 width: Usuario.imagemSize,
                 height: Usuario.imagemSize
@@ -57,12 +57,14 @@ function Introdução() {
         //alert("Evento dentro do componente! Click no botão.")
     }
     return (
-        <div className="introducao">
-            <Perfil />
-            <h2>Bem vindo ao primeiro componente do React</h2>
-            <Lista />
-            <Botao count={count} onClick={ativaALert} />
-            <Botao count={count} onClick={ativaALert} />
+        <div className="App">
+            <div className="introducao">
+                <Perfil />
+                <h2>Bem vindo ao primeiro componente do React</h2>
+                <Lista />
+                <Botao count={count} onClick={ativaALert} />
+                <Botao count={count} onClick={ativaALert} />
+            </div>
         </div>
     )
 }

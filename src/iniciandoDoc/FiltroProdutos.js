@@ -8,7 +8,7 @@ function BarraPesquisa({ filtroText, apenasEmEstoque, filtroTextAtivo, emEstoque
                 <input type="text" placeholder="Nome Do Produto" name="inputProduto" value={filtroText} onChange={(e) => filtroTextAtivo(e.target.value)} />
                 <br />
                 <label>
-                    <input type="checkbox" name="emEstoque" checked={apenasEmEstoque} onChange={(e)=> emEstoqueAtivo(e.target.checked)}/>
+                    <input type="checkbox" name="emEstoque" checked={apenasEmEstoque} onChange={(e) => emEstoqueAtivo(e.target.checked)} />
                     {' '}
                     Apenas Produtos Em Estoque
                 </label>
@@ -49,13 +49,13 @@ function TabelaProdutos({ produtos, filtroText, apenasEmEstoque }) {
         if (produto.nome.toLowerCase().indexOf(filtroText.toLowerCase()) === -1) {
             return
         }
-        if(apenasEmEstoque && !produto.emEstoque){
+        if (apenasEmEstoque && !produto.emEstoque) {
             return
         }
-        if(produto.categoria !== ultimaCategoria){
-            linhas.push(<LinhaCategoria categoria={produto.categoria} key={produto.categoria}/>)
+        if (produto.categoria !== ultimaCategoria) {
+            linhas.push(<LinhaCategoria categoria={produto.categoria} key={produto.categoria} />)
         }
-        linhas.push(<LinhaProdutos produto={produto} key={produto.nome}/>)
+        linhas.push(<LinhaProdutos produto={produto} key={produto.nome} />)
         ultimaCategoria = produto.categoria
     });
 
@@ -99,7 +99,7 @@ function FiltroProdutos({ produtos }) {
                     emEstoqueAtivo={setApenasEmEstoque} />
             </div>
             <div className="tabelaProdutos">
-                <TabelaProdutos 
+                <TabelaProdutos
                     produtos={produtos}
                     filtroText={filtroText}
                     apenasEmEstoque={apenasEmEstoque} />
@@ -109,7 +109,11 @@ function FiltroProdutos({ produtos }) {
 }
 
 function FiltroProdutosExp() {
-    return <FiltroProdutos produtos={produtos} />
+    return (
+        <div className="App">
+            <FiltroProdutos produtos={produtos} />
+        </div>
+    )
 }
 
 export default FiltroProdutosExp

@@ -1,5 +1,5 @@
 //jogo da velha
-import { useState } from "react";
+import { useState, React   } from "react";
 
 function Square({ value, onSquareClick }) {
   //const [value, setValue] = useState(null)
@@ -92,7 +92,6 @@ function JogoDaVelha() {
   const xIsNext = movimentoAtual % 2 === 0
   const currentSquares = history[movimentoAtual]
 
-  
   function maniPlay(proxSquare) {
     const nextHistory = [...history.slice(0, movimentoAtual + 1), proxSquare]
     setHistory(nextHistory)
@@ -100,7 +99,6 @@ function JogoDaVelha() {
     // console.log("Maniplay! " + nextHistory[9]) 
     // console.log("CurrenrSquares " + currentSquares[8])
   }
-
 
   function irPara(proxMovimento) {
     setMovimentoAtual(proxMovimento)
@@ -121,10 +119,8 @@ function JogoDaVelha() {
     )
   })
 
-
-
   return (
-    <>
+    <div className="App">
       <div className='game'>
         <div className="board">
           <Board xIsNext={xIsNext} squares={currentSquares} play={maniPlay} />
@@ -133,7 +129,7 @@ function JogoDaVelha() {
           <small>{movimentos}</small>
         </div>
       </div >
-    </>
+    </div>
   )
 }
 

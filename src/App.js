@@ -1,22 +1,11 @@
-import './App.css';
-import JogoDaVelha from './Board';
-import Introdução from './Introducao';
-import FiltroProdutos from './FiltroProdutos';
+import "./iniciandoDoc/App.css";
+import React from "react";
+import Rotas from "./Rotas";
 
 export default function App() {
-
-  
   return (
-    <div className="App">
-      <Introdução />
-      <div>
-        <JogoDaVelha/>
-      </div>
-      <div className='filtroProdutos'>
-      <FiltroProdutos/>
-      </div>
-        
-    </div>
+    
+      <Rotas />
   );
 }
 
