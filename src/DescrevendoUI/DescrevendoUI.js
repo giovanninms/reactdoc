@@ -5,12 +5,12 @@ function DescrevendoUI() {
     return (
         <div className="App">
             <h1></h1>
-            <Avatar size={80} person={{name: "Harry Potter", imageId:"QapGaDV_d.webp"}}/>
-            <br/>
-            <Avatar Size={40} person={{name:"Piccolo", imageId: "uR06bXK_d.webp"}}/>
-            <DataFormatada/>
+            <Avatar size={80} person={{ name: "Harry Potter", imageId: "QapGaDV_d.webp" }} />
+            <br />
+            <Avatar Size={40} person={{ name: "Piccolo", imageId: "uR06bXK_d.webp" }} />
+            <DataFormatada />
             <Perfil />
-           <PackingList/>
+            <PackingList />
             <ul>
                 <li>Descrição do Perfil</li>
                 <li>Descrição do Perfil</li>
@@ -20,32 +20,39 @@ function DescrevendoUI() {
     )
 }
 
-function Avatar({person, size}){
-    return(
+function Avatar({ person, size }) {
+    return (
         <>
             <img src={getImageUrl(person)} alt={person.name} width={size} height={size} />
         </>
     )
 }
 
-function Item({name, isPacked}){
+function Item({ name, isPacked }) {
+    let itemContent = name
     if (isPacked) {
-        return <li className="item">{name} ✔</li>
+        itemContent = (
+            <del>
+                {name + "✔"}
+            </del>
+        )
     }
-    return <li className="item">{name}</li>
+    return( <li className="item">
+       {itemContent}
+        </li>)
 }
 
-function PackingList() {
+        function PackingList() {
     return(
         <section>
             <h1>Lista de Embalagem da Sally Ride</h1>
             <ul>
-                <Item isPacked={true} name="Traje espacial"/>
-                <Item isPacked={true} name="Capacete com Folha dourada"/>
-                <Item isPacked={false} name="Foto da Tam"/>
+                <Item isPacked={true} name="Traje espacial" />
+                <Item isPacked={true} name="Capacete com Folha dourada" />
+                <Item isPacked={false} name="Foto da Tam" />
             </ul>
         </section>
-    )
+        )
 }
 
-export default DescrevendoUI
+        export default DescrevendoUI
