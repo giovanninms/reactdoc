@@ -1,15 +1,17 @@
 import { Perfil } from "../iniciandoDoc/Introducao"
 import DataFormatada from "./DataFormatada"
 import getImageUrl from "./Util"
+import List from "./List"
 function DescrevendoUI() {
     return (
         <div className="App">
             <h1></h1>
-            <Avatar size={80} person={{ name: "Harry Potter", imageId: "QapGaDV_d.webp" }} />
+            <Avatar size={50} person={{ name: "Harry Potter", imageId: "QapGaDV_d" }} />
             <br />
-            <Avatar Size={40} person={{ name: "Piccolo", imageId: "uR06bXK_d.webp" }} />
+            <Avatar size={50} person={{ name: "Piccolo", imageId: "uR06bXK_d" }} />
             <DataFormatada />
             <Perfil />
+            <List/>
             <PackingList />
             <ul>
                 <li>Descrição do Perfil</li>
