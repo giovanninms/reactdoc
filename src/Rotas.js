@@ -6,6 +6,8 @@ import FiltroProdutosExp from './iniciandoDoc/FiltroProdutos'
 import Introdução from './iniciandoDoc/Introducao'
 import DescrevendoUI from './DescrevendoUI/DescrevendoUI'
 import Home from './Home'
+import AdicionandoInteratividade from './AdicionandoInteratividade/AdicionandoInteratividade'
+import RenderizarEConfirmar from './AdicionandoInteratividade/RenderizarEConfirmar'
 
 function Rotas() {
     return(
@@ -16,6 +18,8 @@ function Rotas() {
             <Route path="/filtroproduto" component={FiltroProdutosExp} exact/>
             <Route path="/introducao" component={Introdução} exact/>
             <Route path="/descrevendoui" component={DescrevendoUI} exact/>
+            <Route path="/adicionandointeratividade" component={AdicionandoInteratividade} exact/>
+            {/* <Route path="/renderizareconfirmar" component={RenderizarEConfirmar} exact/> */}
         </BrowserRouter>
         </>
     )

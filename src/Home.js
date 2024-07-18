@@ -2,7 +2,7 @@ import React from "react"
 
 function Home() {
     return (
-        <>
+        <div className="Home">
             <h1>Home</h1>
                 <li>
                     <a href="/introducao">Introdução</a>
@@ -14,9 +14,15 @@ function Home() {
                     <a href="/filtroproduto">Filtro de produtos</a>
                 </li>
                 <li>
-                    <a href="/descrevendoUI">Descrevendo UI</a>
+                    <a href="/descrevendoui">Descrevendo UI</a>
                 </li>
-        </>
+                <li>
+                    <a href="/adicionandointeratividade">Adicionando Interatividade</a>
+                </li>
+                <li>
+                    <a href="/renderizareconfirmar">Renderizar E Confirmar</a>
+                </li>
+        </div>
     )
 }
 
