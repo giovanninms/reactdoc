@@ -22,6 +22,9 @@ function Home() {
                 <li>
                     <a href="/renderizareconfirmar">Renderizar E Confirmar</a>
                 </li>
+                <li>
+                    <a href="/compestadocomponente">Compartilhando Estado Entre Componentes</a>
+                </li>
         </div>
     )
 }

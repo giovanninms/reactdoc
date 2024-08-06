@@ -8,6 +8,7 @@ import DescrevendoUI from './DescrevendoUI/DescrevendoUI'
 import Home from './Home'
 import AdicionandoInteratividade from './AdicionandoInteratividade/AdicionandoInteratividade'
 import RenderizarEConfirmar from './AdicionandoInteratividade/RenderizarEConfirmar'
+import CompEstadoComponente from './GerenciandoEstado/CompEstadoComponente'
 
 function Rotas() {
     return(
@@ -20,6 +21,7 @@ function Rotas() {
             <Route path="/descrevendoui" component={DescrevendoUI} exact/>
             <Route path="/adicionandointeratividade" component={AdicionandoInteratividade} exact/>
             {/* <Route path="/renderizareconfirmar" component={RenderizarEConfirmar} exact/> */}
+            <Route path="/compestadocomponente" component={CompEstadoComponente}/>
         </BrowserRouter>
         </>
     )

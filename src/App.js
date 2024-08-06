@@ -7,12 +7,12 @@ import {createRoot} from 'react-dom/client'
 export default function App() {
   
   
-  const root = createRoot(document.getElementById('root'))
-  root.render(<Image/>)
+  // const root = createRoot(document.getElementById('root'))
+  // root.render(<Image/>)
   
 
-  // return (
-  //     <Rotas />
-  // )
+  return (
+      <Rotas />
+  )
 }
 
